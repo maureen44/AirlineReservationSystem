@@ -51,6 +51,24 @@ namespace AirlineReservationSystem {
 			);
 		void displayPassagerInfo() const;
 
+		//Passenger Information:
+		const std::string& getNationality() const;
+		void setNationality(const std::string& nationality);
+
+		const std::string& getGender() const;
+		void setGender(const std::string& gender);
+
+		int getPassportNo() const;
+		void setPassportNo(int passportNo);
+
+		//const getPassportExpiration() const;
+		//void setPassportExpiration();
+
+		//Flight Schedule
+		const std::string& getAirline() const;
+		void setAirline(const std::string& airline);
+
+
 	private:
 		std::string mFirstName;
 		std::string mLastName;
