@@ -61,6 +61,9 @@ namespace AirlineReservationSystem {
 		int getPassportNo() const;
 		void setPassportNo(int passportNo);
 
+		int getBookingNo() const;
+		void setBookingNo(int bookingNo);
+
 		//const getPassportExpiration() const;
 		//void setPassportExpiration();
 
