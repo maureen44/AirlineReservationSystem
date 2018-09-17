@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="Airline.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="UserInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Airline.cpp" />
