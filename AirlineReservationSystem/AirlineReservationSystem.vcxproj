@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Airline.h" />
+    <ClInclude Include="AirlineDB.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="PassengerDB.h" />
     <ClInclude Include="pch.h" />

@@ -43,21 +43,14 @@ namespace AirlineReservationSystem {
 		void setSeatNumber(int seatNo);
 
 		/*const std::string& getSchedule() const;
-		void setSchedule(const std::string& schedule);
+		void setSchedule(const std::string& schedule);*/
 
-		const std::string& getUserTicketInfo() const;
-		void setUserTicketInfo(const std::string& userInfo);
+		//const std::string& getUserTicketInfo() const;
 
-		*/
-
-		//const getDateOfBirth() const;
-		//void setDateOfBirth();
-
-		//const getDepartureTime() const;
-		//void setDepartureTime();
-
-		//const getArrivalTime() const;
-		//void setArrivalTime();
+		void userTicketInformation(int AirlineNumber, const std::string& departureLocation,
+			const std::string& depatureDate, const std::string& departureTime,
+			const std::string& arrivalLocation, const std::string& arrivalDate,
+			const std::string& arrivalTime);
 
 		void reserved();
 		void notReserved();
