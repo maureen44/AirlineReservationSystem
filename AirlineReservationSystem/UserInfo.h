@@ -28,8 +28,8 @@ namespace AirlineReservationSystem {
 		const std::string& getNationality() const;
 		void setNationality(const std::string& nationality);
 
-		//const getPassportExpiration() const;
-		//void setPassportExpiration();
+		/*const std::string& getPassportExpiration() const;
+		void setPassportExpiration()*/;
 
 		void userTicketInformation(const std::string& firstName, const std::string& lastName,
 			const std::string& departureLocation, const std::string& arrivalLocation
@@ -39,6 +39,11 @@ namespace AirlineReservationSystem {
 	private:
 		std::string mFirstName;
 		std::string mLastName;
+		std::string mDateOfBirth;
+		std::string mPassportNo;
+		std::string mGender;
+		std::string mNationality;
+		int bookingNumber = 111000;
 
 	};
 }

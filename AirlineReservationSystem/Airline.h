@@ -13,22 +13,34 @@ namespace AirlineReservationSystem {
 			const std::string& arrivalDate, const std::string& arrivalTime,
 			int airlineNo);
 
-		const std::string& getAirlineNo() const;
-		void setAirlineNO(const std::string& airlineNo);
+		int getAirlineNo() const;
+		void setAirlineNO(int airlineNo);
 		
-		const std::string& getAirlineSeats() const;
-		void setAirlineSeats(const std::string& menu);
+		int getAirlineSeats() const;
+		void setAirlineSeats(int numberOfSeats);
 
 		const std::string& getDepartureLocation() const;
 		void setDepatureLocation(const std::string& departureLocation);
 
+		const std::string& getDepartureDate() const;
+		void setDepatureDate(const std::string& departureDate);
+
+		const std::string& getDepartureTime() const;
+		void setDepatureTime(const std::string& departureTime);
+			   		 
 		const std::string& getArrivalLocation() const;
 		void setArrivalLocation(const std::string& arrivalLocation);
 
+		const std::string& getArrivalDate() const;
+		void setArrivalDate(const std::string& arrivalDate);
+
+		const std::string& getArrivalTime() const;
+		void setArrivalTime(const std::string& arrivalTime);
+
 		bool isReserved() const;
 
-		int getAirlineNumberOfSeats() const;
-		void setAirlineNumberOfSeats(int numberOfSeats);
+		int getSeatNumber() const;
+		void setSeatNumber(int seatNo);
 
 		/*const std::string& getSchedule() const;
 		void setSchedule(const std::string& schedule);
@@ -58,9 +70,9 @@ namespace AirlineReservationSystem {
 	private:		
 		/*std::string mMenu = displayMenu();
 		std::string mSchedule;*/
-		int mAirlineNumber;
+		int mAirlineNumber = 200;
 		bool mReserved = false;
-		int mAirlineNumberOfSeats;
+		int mAirlineNumberOfSeats = 300;
 		int mSeatNumber = 1;
 		std::string mDepartureLocation;
 		std::string mAirlineDepartureDate;
