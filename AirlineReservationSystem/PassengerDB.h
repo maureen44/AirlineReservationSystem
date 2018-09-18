@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include "Airline.h"
-#include "UserInfo.h"
 
 
 ///-----------------------------------NOT FINISHED-----------------------------------------///
@@ -16,17 +15,17 @@ namespace AirlineReservationSystem {
 	class PassengerDB
 	{
 	public:
-		UserInfo& addPassenger(const std::string& firstName,
+		Airline& addPassenger(const std::string& firstName,
 			const std::string& lastName); //TODO: add DOB, passport no.? 
-		UserInfo& getPassenger(int bookingNo);
-		UserInfo& getPassenger(const std::string& firstName,
+		Airline& getPassenger(int bookingNo);
+		Airline& getPassenger(const std::string& firstName,
 			const std::string& lastName);
 
 		void displayPassengerInfo() const;
 
 
 	private:
-		std::vector<UserInfo> mPassengers;
+		std::vector<Airline> mPassengers;
 		int mNextBookingNumber = kFirstBookingNumber;
 	};
 }
