@@ -16,8 +16,8 @@ namespace AirlineReservationSystem {
 	class PassengerDB
 	{
 	public:
-		UserInfo& addPassenger(const std::string& firstName,
-			const std::string& lastName); //TODO: add DOB, passport no.? 
+		UserInfo& addPassenger(const string& firstName,
+			const string& lastName, const string& passportNo, const string& gender, const string& nationality); 
 		UserInfo& getPassenger(int bookingNo);
 		UserInfo& getPassenger(const std::string& firstName,
 			const std::string& lastName);
