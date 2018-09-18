@@ -19,5 +19,6 @@ namespace AirlineReservationSystem {
 			const std::string& arrivalDate, const std::string& arrivalTime);
 	private:
 		std::vector<Airline> mAirline;
+		std::vector<Airline>
 	};
 }
