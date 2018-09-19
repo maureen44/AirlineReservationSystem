@@ -16,7 +16,13 @@ namespace AirlineReservationSystem {
 		Airline theAirline(departureLocation, departureDate,
 			departureTime, arrivalLocation, arrivalDate, arrivalTime);
 		theAirline.setAirlineNO(mNextAirlineNumber++);
-		/*theAirline.reserve();*/
+		theAirline.setAirlineSeats(mNextSeat++);
+		theAirline.setDepatureLocation(departureLocation);
+		theAirline.setDepatureDate(departureDate);
+		theAirline.setDepatureTime(departureTime);
+		theAirline.setArrivalLocation(arrivalLocation);
+		theAirline.setArrivalDate(arrivalDate);
+		theAirline.setArrivalTime(arrivalTime);
 		mAirlines.push_back(theAirline);
 
 		return mAirlines[mAirlines.size() - 1];
