@@ -3,15 +3,21 @@
 
 namespace AirlineReservationSystem {
 
-	class Airline 
-{
+	const int NUM_ROWS = 60; // number of rows of seats in an airline
+	const int NUM_COLS = 5; // number of seats in each row.
+	const char EMPTY = '#'; // display symbol for empty seat.
+	const char TAKEN = '*'; // display sysmbol for taken seat.
+
+	class Airline {
 
 	public:
 		Airline() = default;
-		Airline(const std::string& departureLocation, const std::string& departureDate, 
+		Airline(const std::string& departureLocation, const std::string& departureDate,
 			const std::string& departureTime, const std::string& arrivalLocation, 
-			const std::string& arrivalDate, const std::string& arrivalTime,
-			int airlineNo);
+			const std::string& arrivalDate, const std::string& arrivalTime);
+		const std::string& getAirlinePassenger(const std::string& firstName, const std::string& lastName,
+			const std::string& dateOfBirth, const std::string& passportNo,
+			const std::string& gender, const std::string& nationality);
 
 		int getAirlineNo() const;
 		void setAirlineNO(int airlineNo);
@@ -42,26 +48,18 @@ namespace AirlineReservationSystem {
 		int getSeatNumber() const;
 		void setSeatNumber(int seatNo);
 
-		/*const std::string& getSchedule() const;
-		void setSchedule(const std::string& schedule);*/
+		int getAirlinePrice() const;
 
-		//const std::string& getUserTicketInfo() const;
-
-		void userTicketInformation(int AirlineNumber, const std::string& departureLocation,
-			const std::string& depatureDate, const std::string& departureTime,
-			const std::string& arrivalLocation, const std::string& arrivalDate,
-			const std::string& arrivalTime);
-
-		void reserved();
-		void notReserved();
+		void setAirlinePrice(int newAirlinePrice);
+		
+		void reserve();
+		void cancel();
+		void reservedFirstClass(int firstClassIncreaceAmount = 25);
+		void reservedEconomyClass();
 		
 		void displayAirline() const;
 		
 		//Passenger Info
-
-		Passenger() = default;
-		Passenger(const std::string& firstName,
-			const std::string& lastName, const string& passportNo, const string& gender, const string& nationality);
 
 		const std::string& getFirstName() const;
 		void setFirstName(const std::string& firstName);
@@ -83,24 +81,13 @@ namespace AirlineReservationSystem {
 
 		int getBookingNumber() const;
 		void setBookingNumber(int bookingNo);
-
-		bool isPassengerBooked() const;
-
-		void book();
-		void cancel();
-
-		/*const std::string& getPassportExpiration() const;
-		void setPassportExpiration()*/;
-
-		void userTicketInformation(const std::string& firstName, const std::string& lastName);
-
-		/*void userTicketInformation(int AirlineNumber, const std::string& departureLocation,
-			const std::string& depatureDate, const std::string& departureTime,
-			const std::string& arrivalLocation, const std::string& arrivalDate,
-			const std::string& arrivalTime);*/
+		
 		void displayPassengerInfo() const;
 
+		/*void airlineSeats() const;
 
+		void displaySeatingChart(char seats[NUM_ROWS + 1][NUM_COLS + 1]) const;
+*/
 	private:		
 		/*std::string mMenu = displayMenu();
 		std::string mSchedule;*/
@@ -121,15 +108,21 @@ namespace AirlineReservationSystem {
 		std::string mGender;
 		std::string mNationality;
 		int mBookingNumber = 1000;
-		bool mBooked = false;
+		int mAirlinePrice = 500;
 
 
 	};
 
-	Airline::Airline()
-	{
+	/*const std::string& getPassportExpiration() const;
+		void setPassportExpiration()*/;
 
-	}
+		/*void userTicketInformation(const std::string& firstName, const std::string& lastName);*/
+
+		/*void userTicketInformation(int AirlineNumber, const std::string& departureLocation,
+			const std::string& depatureDate, const std::string& departureTime,
+			const std::string& arrivalLocation, const std::string& arrivalDate,
+			const std::string& arrivalTime);*/
+
 }
 
 //Application will present a menu system of choice to the user

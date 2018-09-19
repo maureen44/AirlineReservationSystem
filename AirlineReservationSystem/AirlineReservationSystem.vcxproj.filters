@@ -21,12 +21,6 @@
     <ClInclude Include="Airline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PassengerDB.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AirlineDB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -41,10 +35,7 @@
     <ClCompile Include="Airline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PassengerDB.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="menu.cpp">
+    <ClCompile Include="AirlineDB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

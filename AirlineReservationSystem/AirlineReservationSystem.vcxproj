@@ -153,15 +153,12 @@
   <ItemGroup>
     <ClInclude Include="Airline.h" />
     <ClInclude Include="AirlineDB.h" />
-    <ClInclude Include="menu.h" />
-    <ClInclude Include="PassengerDB.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Airline.cpp" />
+    <ClCompile Include="AirlineDB.cpp" />
     <ClCompile Include="AirlineReservationSystem.cpp" />
-    <ClCompile Include="menu.cpp" />
-    <ClCompile Include="PassengerDB.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
