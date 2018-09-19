@@ -98,12 +98,12 @@ namespace AirlineReservationSystem {
 		mReserved = false;
 	}
 
-	void Airline::reservedFirstClass(int firstClassIncreaceAmount) {
+	/*void Airline::reservedFirstClass(int firstClassIncreaceAmount) {
 		setAirlinePrice(getAirlinePrice() + firstClassIncreaceAmount);
 	}
 	void Airline::reservedEconomyClass() {
 		setAirlinePrice(getAirlinePrice());
-	}
+	}*/
 
 	bool Airline::isReserved() const {
 		return mReserved;
@@ -189,98 +189,5 @@ namespace AirlineReservationSystem {
 		cout << "Passport Number " << getPassportNo() << endl;
 	}
 
-
-	//void Airline::airlineSeats() const {
-	//	//int price(int row, int col); // calculate ticket price
-	//	bool isValid(int row, int seat);// is the seat at(row, seat) empty?
-	//	char seats[NUM_ROWS + 1][NUM_COLS + 1];
-	//	for (size_t row{ 1 }; row < NUM_ROWS + 1; ++row) {
-	//		for (size_t col{ 1 }; col < NUM_COLS + 1; ++col) {
-	//			seats[row][col] = EMPTY;
-	//		}
-	//	}
-	//	displaySeatingChart(seats);
-	//	int row = 0;
-	//	char seat = 'A';
-	//	char anotherSeat = 'y';
-	//	vector<int> rowsWanted;
-	//	vector<int> seatsWanted;
-	//	while (anotherSeat == 'y') {
-
-	//		cout << "What seat would you like? (row 1-15, seat 1-30) ";
-
-	//		cin >> row >> seat;
-
-	//		if (!isValid(row, seat)) {
-	//			cout << "Please enter: row 1-60, seat A-E " << endl;
-	//		}
-	//		else if (seats[row][seat] == EMPTY) {
-	//			rowsWanted.push_back(row);
-	//			seatsWanted.push_back(seat);
-	//			cout << row << ", " << seat << endl;
-	//			seats[row][seat] = TAKEN;
-	//			cout << "Another seat? (y/n): ";
-	//			cin >> anotherSeat;
-	//		}
-	//		else {
-	//			cout << "That seat is taken, try another seat." << endl;
-	//			row = 0;
-	//			seat = 'A';
-	//		}
-	//	}
-	//	displaySeatingChart(seats);
-	//	/*int totalCost = 0;
-	//	for (size_t i{ 0 }; i < rowsWanted.size(); ++i) {
-	//		totalCost += price(rowsWanted[i], seatsWanted[i]);
-	//	}
-	//	cout << "Total cost = " << totalCost << endl;*/
-	//}
-
-
-	//void Airline::displaySeatingChart(char seats[NUM_ROWS + 1][NUM_COLS + 1]) const {
-	//	cout << "\tSeats" << endl;
-	//	cout << "\t"
-	//		<< setw(2) << 'L'
-	//		<< setw(3) << 'R' << endl;
-	//	cout << "\t";
-	//	for (size_t i{ 1 }; i <= NUM_COLS; ++i) {
-	//		cout << i % 5;
-	//	}
-	//	cout << endl;
-
-	//	for (size_t i{ 1 }; i <= NUM_ROWS; ++i) {
-	//		cout << "Row " << i << "\t";
-	//		for (size_t j{ 1 }; j <= NUM_COLS; ++j) {
-	//			cout << seats[i][j];
-	//		}
-	//		cout << endl;
-
-	//	}
-	//}
-
-	//bool isValid(int row, int seat) {
-	//	return 1 <= row && row <= NUM_ROWS
-	//		&& 1 <= seat && seat <= NUM_COLS;
-	//}
 }
-
-	/*Airline::UserInfo(const std::string& firstName, const std::string& lastName,
-		const std::string& dateOfBirth, const std::string& passportNo,
-		const std::string& gender, const std::string& nationality) : mFirstName(firstName), mLastName(lastName),
-		mDateOfBirth(dateOfBirth), mPassportNo(passportNo), mGender(gender), mNationality(nationality) {
-
-	}*/
-
-	/*const std::string& getPassportExpiration() const;
-	void setPassportExpiration()*/;
-
-	/*void Airline::userTicketInformation(const std::string& firstName, const std::string& lastName) {
-
-	}
-	void Airline::userTicketInformation(int AirlineNumber, const std::string& departureLocation,
-		const std::string& depatureDate, const std::string& departureTime,
-		const std::string& arrivalLocation, const std::string& arrivalDate,
-		const std::string& arrivalTime) {
-
-	}*/
 

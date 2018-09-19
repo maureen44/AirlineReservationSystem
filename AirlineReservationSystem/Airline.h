@@ -1,12 +1,7 @@
 #pragma once
 #include <string>
 
-namespace AirlineReservationSystem {
-
-	const int NUM_ROWS = 60; // number of rows of seats in an airline
-	const int NUM_COLS = 5; // number of seats in each row.
-	const char EMPTY = '#'; // display symbol for empty seat.
-	const char TAKEN = '*'; // display sysmbol for taken seat.
+namespace AirlineReservationSystem {	
 
 	class Airline {
 
@@ -56,8 +51,8 @@ namespace AirlineReservationSystem {
 		
 		void reserve();
 		void cancel();
-		void reservedFirstClass(int firstClassIncreaceAmount = 25);
-		void reservedEconomyClass();
+		/*void reservedFirstClass(int firstClassIncreaceAmount = 25);
+		void reservedEconomyClass();*/
 		
 		void displayAirline() const;
 		
@@ -86,13 +81,7 @@ namespace AirlineReservationSystem {
 		
 		void displayPassengerInfo() const;
 
-		/*void airlineSeats() const;
-
-		void displaySeatingChart(char seats[NUM_ROWS + 1][NUM_COLS + 1]) const;
-*/
-	private:		
-		/*std::string mMenu = displayMenu();
-		std::string mSchedule;*/
+	private:
 		int mAirlineNumber = 200;
 		bool mReserved = false;
 		int mAirlineNumberOfSeats = 300;
