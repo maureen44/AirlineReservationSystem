@@ -59,6 +59,10 @@ namespace AirlineReservationSystem {
 		
 		//Passenger Info
 
+		Passenger() = default;
+		Passenger(const std::string& firstName,
+			const std::string& lastName, const string& passportNo, const string& gender, const string& nationality);
+
 		const std::string& getFirstName() const;
 		void setFirstName(const std::string& firstName);
 
@@ -94,7 +98,7 @@ namespace AirlineReservationSystem {
 			const std::string& depatureDate, const std::string& departureTime,
 			const std::string& arrivalLocation, const std::string& arrivalDate,
 			const std::string& arrivalTime);*/
-		void displayPassagerInfo() const;
+		void displayPassengerInfo() const;
 
 
 	private:		

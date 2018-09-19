@@ -10,9 +10,9 @@ namespace AirlinePassengers
 {
 
 	Airline& PassengerDB::addPassenger(const string& firstName,
-		const string& lastName, const string& passportNo, const string& gender, const string& nationality)
+		const string& lastName, const string& passportNo, const string& gender, const string& nationality, const string& dateOfBirth)
 	{
-		UserInfo thePassenger(firstName, lastName, passportNo, gender, nationality);
+		Airline thePassenger(firstName, lastName, passportNo, gender, nationality, dateOfBirth);
 		thePassenger.setBookingNumber(mNextBookingNumber++);
 		thePassenger.reserve();
 		mPassengers.push_back(thePassenger);
@@ -41,6 +41,12 @@ namespace AirlinePassengers
 		throw logic_error("No Booking Information found.");
 	}
 
+	void PassengerDB::displayPassengerInfo() const
+	{
+		for (const auto& passenger : mPassengers) {
+			passenger.display();
+		}
+	}
 
 	//Ideas for displaying flight details: To be placed in this database or the flight database?
 

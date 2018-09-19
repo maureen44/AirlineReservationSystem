@@ -97,12 +97,9 @@ namespace AirlineReservationSystem {
 
 	//Passenger Info
 
-	/*Airline::UserInfo(const std::string& firstName, const std::string& lastName,
-		const std::string& dateOfBirth, const std::string& passportNo,
-		const std::string& gender, const std::string& nationality) : mFirstName(firstName), mLastName(lastName),
-		mDateOfBirth(dateOfBirth), mPassportNo(passportNo), mGender(gender), mNationality(nationality) {
-
-	}*/
+	Airline::Passenger(const std::string & firstName, const std::string & lastName, const string & passportNo, const string & gender, const std::string& dateOfBirth, const string & nationality)
+	{
+	}
 
 	const std::string& Airline::getFirstName() const {
 		return mFirstName;
@@ -163,9 +160,6 @@ namespace AirlineReservationSystem {
 		mBooked = false;
 	}
 
-	/*const std::string& getPassportExpiration() const;
-	void setPassportExpiration()*/;
-
 	void Airline::userTicketInformation(const std::string& firstName, const std::string& lastName) {
 
 	}
@@ -187,8 +181,8 @@ namespace AirlineReservationSystem {
 		cout << "Arrival Time " << getArrivalTime();
 	}
 
-	void Airline::displayPassagerInfo() const {
-		cout << "Passanger " << getFirstName() << ", " << getLastName() << endl;
+	void Airline::displayPassengerInfo() const {
+		cout << "Passenger " << getFirstName() << ", " << getLastName() << endl;
 		cout << "-------------------------------------------------------" << endl;
 		cout << "Date of Birth " << getDateOfBirth() << endl;
 		cout << "Gender " << getGender() << endl;
