@@ -16,7 +16,13 @@ namespace AirlineReservationSystem {
 		Airline theAirline(departureLocation, departureDate,
 			departureTime, arrivalLocation, arrivalDate, arrivalTime);
 		theAirline.setAirlineNO(mNextAirlineNumber++);
-		/*theAirline.reserve();*/
+		theAirline.setAirlineSeats(mNextSeat++);
+		theAirline.setDepatureLocation(departureLocation);
+		theAirline.setDepatureDate(departureDate);
+		theAirline.setDepatureTime(departureTime);
+		theAirline.setArrivalLocation(arrivalLocation);
+		theAirline.setArrivalDate(arrivalDate);
+		theAirline.setArrivalTime(arrivalTime);
 		mAirlines.push_back(theAirline);
 
 		return mAirlines[mAirlines.size() - 1];
@@ -101,18 +107,5 @@ namespace AirlineReservationSystem {
 	void AirlineDB::displayAll() const {
 
 	}
-	
 
-	
-	/*
-	Given a row number and a column number.
-	this function will return the price of
-	that ticket.
-	*/
-	/*int price(int row, int col) {
-		return 100 - 2 * (NUM_ROWS - row)
-			- (col > NUM_COLS / 2 ?
-				abs(1 + NUM_COLS / 2 - col) :
-				abs(NUM_COLS / 2 - col));
-	}*/
 }

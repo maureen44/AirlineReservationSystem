@@ -39,5 +39,7 @@ namespace AirlineReservationSystem {
 		int mNextAirlineNumber = kAirlineNumber;
 		std::vector<Airline> mPassengers;
 		int mNextBookingNumber = kFirstBookingNumber;
+		std::vector<Airline> mSeats;
+		int mNextSeat = kSeatNumber;
 	};
 }
