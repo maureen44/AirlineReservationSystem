@@ -10,77 +10,39 @@ using namespace std;
 
 namespace AirlineReservationSystem {
 
-	Airline& AirlineDB::addAirline(const std::string& departureLocation, const std::string& departureDate,
-		const std::string& departureTime, const std::string& arrivalLocation,
-		const std::string& arrivalDate, const std::string& arrivalTime) {
-		Airline theAirline(departureLocation, departureDate,
-			departureTime, arrivalLocation, arrivalDate, arrivalTime);
-		theAirline.setAirlineNO(mNextAirlineNumber++);
-		theAirline.setAirlineSeats(mNextSeat++);
-		theAirline.setDepatureLocation(departureLocation);
-		theAirline.setDepatureDate(departureDate);
-		theAirline.setDepatureTime(departureTime);
-		theAirline.setArrivalLocation(arrivalLocation);
-		theAirline.setArrivalDate(arrivalDate);
-		theAirline.setArrivalTime(arrivalTime);
-		mAirlines.push_back(theAirline);
-
-		return mAirlines[mAirlines.size() - 1];
-
-	}
-	Airline& AirlineDB::getAirline(int airlineNO) {
-		for (auto& airline : mAirlines) {
-			if (airline.getAirlineNo() == airlineNO) {
-				return airline;
-			}
-		}
-		throw logic_error("No Airline found.");
-	}
-	Airline& AirlineDB::getAirline(const std::string& departureLocation, const std::string& departureDate,
-		const std::string& departureTime, const std::string& arrivalLocation,
-		const std::string& arrivalDate, const std::string& arrivalTime) {
-		for (auto& airline : mAirlines) {
-			if (airline.getDepartureLocation() == departureLocation &&
-				airline.getDepartureDate() == departureDate &&
-				airline.getDepartureTime() == departureTime &&
-				airline.getArrivalLocation() == arrivalLocation &&
-				airline.getArrivalDate() == arrivalDate &&
-				airline.getArrivalTime() == arrivalTime) {
-				return airline;
-			}
-		}
-		throw logic_error("No Airline found.");
-	}
-	Airline& AirlineDB::addPassenger(const std::string& firstName, const std::string& lastName,
+	AirlinePassenger& AirlineDB::addPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
 		const std::string& gender, const std::string& nationality) {
-		Airline thePassenger(firstName, lastName, dateOfBirth,
+		AirlinePassenger thePassenger(firstName, lastName, dateOfBirth,
 			passportNo, gender, nationality);
 		thePassenger.setBookingNumber(mNextBookingNumber++);
+		thePassenger.setSeat(mNextSeatNumber++);
 		thePassenger.reserve();
 		mPassengers.push_back(thePassenger);
 		return mPassengers[mPassengers.size() - 1];
 	}
 
-	Airline& AirlineDB::getPassenger(int bookingNo) {
+	AirlinePassenger& AirlineDB::getPassenger(int bookingNo, int seatNo) {
 		for (auto& passenger : mPassengers) {
-			if (passenger.getBookingNumber() == bookingNo) {
+			if (passenger.getBookingNumber() == bookingNo && 
+				passenger.getSeat() == seatNo) {
 				return passenger;
 			}
 
 		}		
 		throw logic_error("No Passenger found.");
 	}
-	Airline& AirlineDB::getPassenger(const std::string& firstName, const std::string& lastName,
+	AirlinePassenger& AirlineDB::getPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
-		const std::string& gender, const std::string& nationality) {
+		const std::string& gender, const std::string& nationality, const char airline) {
 		for (auto& passenger : mPassengers) {
 			if (passenger.getFirstName() == firstName &&
 				passenger.getLastName() == lastName &&
 				passenger.getDateOfBirth() == dateOfBirth && 
 				passenger.getPassportNo() == passportNo &&
 				passenger.getGender() == gender && 
-				passenger.getNationality() == nationality) {
+				passenger.getNationality() == nationality &&
+				passenger.getAirline() == airline) {
 				return passenger;
 			}
 		}
@@ -89,11 +51,9 @@ namespace AirlineReservationSystem {
 
 	}
 
-	void AirlineDB::displayAirlineSchedule() const {
-		for (const auto& airline : mAirlines) {
-			airline.displayAirline();
-		}
-
+	//TODO
+	void AirlineDB::displayBookingInfo() const {
+				
 	}
 
 	void AirlineDB::displayPassengerInfo() const {
@@ -105,7 +65,9 @@ namespace AirlineReservationSystem {
 	}
 
 	void AirlineDB::displayAll() const {
-
+		for (const auto& passenger : mPassengers) {
+			passenger.displayPassengerInfo();
+		}
 	}
 
 }
