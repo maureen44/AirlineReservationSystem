@@ -12,13 +12,7 @@ namespace AirlineReservationSystem {
 	"  Delta Chicago 09/20/2018 11AM Phoenix 09/20/2018 5PM",
 	"  American Houston 09/20/2018 10AM Seattle 09/20/2018 8PM",
 	"  JetBlue Seattle 09/20/2018 9AM Indianapolis 09/20/2018 10PM"  };
-	/*const std::vector<std::string> AIRLINE_ARRIVAL = {" Phoenix 09/20/2018 8PM",
-	" Phoenix 309/20/2018 6 PM",
-	" Chicago 09/20/2018 8 PM",
-	" Phoenix 09/20/2018 5PM",
-	" Seattle 09/20/2018 8PM",
-	" Indianapolis 09/20/2018 10PM"};*/
-
+	
 	class AirlinePassenger {
 		
 	public:

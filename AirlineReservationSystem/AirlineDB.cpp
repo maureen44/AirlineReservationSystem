@@ -12,7 +12,7 @@ namespace AirlineReservationSystem {
 
 	AirlinePassenger& AirlineDB::addPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
-		const std::string& gender, const std::string& nationality, std::vector<std::string> airline) {
+		const std::string& gender, const std::string& nationality, const std::string& airline) {
 		AirlinePassenger thePassenger(firstName, lastName, dateOfBirth,
 			passportNo, gender, nationality);
 		thePassenger.setBookingNumber(mNextBookingNumber++);
