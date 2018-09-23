@@ -6,12 +6,12 @@ namespace AirlineReservationSystem {
 
 	const std::vector<std::string> HEADING = { "No. Airline Departure DepartureDate DepartureTime Arrival ArrivalDate ArrivalTime" };
 	const std::vector<int> AIRLINE_NUMBER = { 1, 2, 3, 4, 5, 6 };
-	const std::vector<std::string> AIRLINE_DETAILS = { "Alaska Seattle 09/20/2018 11AM Phoenix 09/20/2018 8PM",
-	"United Detroit 09/20/2018 10AM Phoenix 309/20/2018 6 PM",
-	"Spirit Seattle 09/20/2018 9AM Chicago 09/20/2018 8 PM",
-	"Delta Chicago 09/20/2018 11AM Phoenix 09/20/2018 5PM",
-	"American Houston 09/20/2018 10AM Seattle 09/20/2018 8PM",
-	"JetBlue Seattle 09/20/2018 9AM Indianapolis 09/20/2018 10PM"  };
+	const std::vector<std::string> AIRLINE_DETAILS = { "  Alaska Seattle 09/20/2018 11AM Phoenix 09/20/2018 8PM",
+	"  United Detroit 09/20/2018 10AM Phoenix 309/20/2018 6 PM",
+	"  Spirit Seattle 09/20/2018 9AM Chicago 09/20/2018 8 PM",
+	"  Delta Chicago 09/20/2018 11AM Phoenix 09/20/2018 5PM",
+	"  American Houston 09/20/2018 10AM Seattle 09/20/2018 8PM",
+	"  JetBlue Seattle 09/20/2018 9AM Indianapolis 09/20/2018 10PM"  };
 	/*const std::vector<std::string> AIRLINE_ARRIVAL = {" Phoenix 09/20/2018 8PM",
 	" Phoenix 309/20/2018 6 PM",
 	" Chicago 09/20/2018 8 PM",
