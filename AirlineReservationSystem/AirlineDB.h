@@ -13,13 +13,13 @@ namespace AirlineReservationSystem {
 		
 		AirlinePassenger& addPassenger(const std::string& firstName, const std::string& lastName,
 			const std::string& dateOfBirth, const std::string& passportNo,
-			const std::string& gender, const std::string& nationality);
+			const std::string& gender, const std::string& nationality, std::vector<std::string> airline);
 		AirlinePassenger& getPassenger(int bookingNo, int SeatNo);
 		AirlinePassenger& getPassenger(const std::string& firstName, const std::string& lastName,
 			const std::string& dateOfBirth, const std::string& passportNo,
-			const std::string& gender, const std::string& nationality, const char airline);
+			const std::string& gender, const std::string& nationality);
 
-		void displayAll() const;
+		void airline() const;
 
 		void displayBookingInfo() const;
 
