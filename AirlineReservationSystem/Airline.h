@@ -1,22 +1,23 @@
 #pragma once
 #include <string>
+#include <vector>
 
 namespace AirlineReservationSystem {
 
-	const char HEADING[1][120] = { "Airline     Departure     DepartureDate     DepartureTime     Arrival     ArrivalDate     ArrivalTime " };
-
-	const char AIRLINE_DEPARTURE[6][100] = { "1.Alaska     Seattle        09/20/2018         11 AM     ",
-								   "2.United     Detroit        09/20/2018         10 AM     ",
-								   "3.Spirit     Seattle        09/20/2018         9 AM     ",
-								   "4.Delta      Chicago        09/20/2018         11 AM     ",
-								   "5.American   Houston        09/20/2018         10 AM     ",
-								   "6.JetBlue    Seattle        09/20/2018         9 AM     " };
-	const char AIRLINE_ARRIVAL[6][100] = { "       Phoenix         09/20/2018     8 PM",
-										  "       Phoenix         309/20/2018     6 PM ",
-										  "        Chicago         09/20/2018     8 PM ",
-										  "       Phoenix         09/20/2018     5 PM ",
-										  "       Seattle         09/20/2018     8 PM",
-										  "        Indianapolis    09/20/2018     10 PM " };
+	const std::vector<std::string> HEADING = { "No. Airline Departure DepartureDate DepartureTime Arrival ArrivalDate ArrivalTime" };
+	const std::vector<int> AIRLINE_NUMBER = { 1, 2, 3, 4, 5, 6 };
+	const std::vector<std::string> AIRLINE_DETAILS = { "Alaska Seattle 09/20/2018 11AM Phoenix 09/20/2018 8PM",
+	"United Detroit 09/20/2018 10AM Phoenix 309/20/2018 6 PM",
+	"Spirit Seattle 09/20/2018 9AM Chicago 09/20/2018 8 PM",
+	"Delta Chicago 09/20/2018 11AM Phoenix 09/20/2018 5PM",
+	"American Houston 09/20/2018 10AM Seattle 09/20/2018 8PM",
+	"JetBlue Seattle 09/20/2018 9AM Indianapolis 09/20/2018 10PM"  };
+	/*const std::vector<std::string> AIRLINE_ARRIVAL = {" Phoenix 09/20/2018 8PM",
+	" Phoenix 309/20/2018 6 PM",
+	" Chicago 09/20/2018 8 PM",
+	" Phoenix 09/20/2018 5PM",
+	" Seattle 09/20/2018 8PM",
+	" Indianapolis 09/20/2018 10PM"};*/
 
 	class AirlinePassenger {
 		
@@ -33,10 +34,7 @@ namespace AirlineReservationSystem {
 		
 		int getSeat() const;
 		void setSeat(int seatNO);	
-
-		const char getAirline() const;
-		void setAirline(char availableAirline);
-
+		
 		int getAirlinePrice() const;
 
 		void setAirlinePrice(int newAirlinePrice);
@@ -64,21 +62,18 @@ namespace AirlineReservationSystem {
 		void setGender(const std::string& gender);
 
 		const std::string& getNationality() const;
-		void setNationality(const std::string& nationality);		
+		void setNationality(const std::string& nationality);	
+
+		void displayBookingInfo() const;
 		
 		void displayPassengerInfo() const;
 
 	private:
-		int mAirline;
+		
 		bool mReserved = false;
 		int mAirlineSeats = 300;
 		int mSeatNumber = 1;
-		std::string mDepartureLocation;
-		std::string mAirlineDepartureDate;
-		std::string mDepartureTime;
-		std::string mArrivalLocation;		
-		std::string mAirlineArrivalDate;
-		std::string mArrivalTime;
+		
 		std::string mFirstName;
 		std::string mLastName;
 		std::string mDateOfBirth;
@@ -89,6 +84,45 @@ namespace AirlineReservationSystem {
 		int mAirlinePrice = 500;
 
 
+	};
+
+	class Airline {
+	public:
+		Airline();
+		Airline(const std::string& departureLocation, const std::string& departureDate,
+			const std::string& departureTime, const std::string& arrivalLocation,
+			const std::string& arrivalDate, const std::string& arrivalTime,
+			int airlineNo);
+
+		const std::string& getAirlineNo() const;
+		void setAirlineNO(const std::string& airlineNo);
+
+		const std::string& getDepartureLocation() const;
+		void setDepatureLocation(const std::string& departureLocation);
+
+		const std::string& getDepartureDate() const;
+		void setDepartureDate();
+
+		const std::string& getDepartureTime() const;
+		void setDepartureTime();
+		
+		const std::string& getArrivalLocation() const;
+		void setArrivalLocation(const std::string& arrivalLocation);
+
+		const std::string& getArrivalDate() const;
+		void setArrivaDate();
+
+		const std::string& getArrivalTime() const;
+		void setArrivalTime();
+
+	private:
+		std::string mAirline;
+		std::string mDepartureLocation;
+		std::string mAirlineDepartureDate;
+		std::string mDepartureTime;
+		std::string mArrivalLocation;
+		std::string mAirlineArrivalDate;
+		std::string mArrivalTime;
 	};
 
 }

@@ -28,27 +28,62 @@ namespace AirlineReservationSystem {
 		mAirlineSeats = seatNo;
 	}
 
-	const char AirlinePassenger::getAirline() const {
+	Airline::Airline(const std::string& departureLocation, const std::string& departureDate,
+		const std::string& departureTime, const std::string& arrivalLocation,
+		const std::string& arrivalDate, const std::string& arrivalTime,
+		int airlineNo) {
+
+	}
+
+	const std::string& Airline::getAirlineNo() const {
 		return mAirline;
 	}
-	void AirlinePassenger::setAirline(char availableAirline) {
-		mAirline = availableAirline;
-		cout << "Airline Schedule" << endl;
-		cout << "==================================================================================================" << endl;
-		for (int i = 0; i < 1; i++) {
-			cout << HEADING[i] << endl;
-		}
-		cout << "==================================================================================================" << endl;
-		for (int i = 0; i < 6; i++) {
-			cout << AIRLINE_DEPARTURE[i] << AIRLINE_ARRIVAL[i] << endl;
-		}
-		cout << "Which Airline would You like for your travel? " << endl;
-		//TODO
-		if (availableAirline == 1)
-		{
-			cout << AIRLINE_DEPARTURE[0] << AIRLINE_ARRIVAL[0] << endl;
-		}
+	void Airline::setAirlineNO(const std::string& airlineNo) {
+
 	}
+
+	const std::string& Airline::getDepartureLocation() const {
+		return mDepartureLocation;
+	}
+	void Airline::setDepatureLocation(const std::string& departureLocation) {
+
+	}
+
+	const std::string& Airline::getDepartureDate() const {
+		return mAirlineDepartureDate;
+	}
+	void Airline::setDepartureDate() {
+
+	}
+
+	const std::string& Airline::getDepartureTime() const {
+		return mDepartureTime;
+	}
+	void Airline::setDepartureTime() {
+
+	}
+
+	const std::string& Airline::getArrivalLocation() const {
+		return mArrivalLocation;
+	}
+	void Airline::setArrivalLocation(const std::string& arrivalLocation) {
+
+	}
+
+	const std::string& Airline::getArrivalDate() const {
+		return mAirlineArrivalDate;
+	}
+	void Airline::setArrivaDate() {
+
+	}
+
+	const std::string& Airline::getArrivalTime() const {
+		return mArrivalTime;
+	}
+	void Airline::setArrivalTime() {
+
+	}
+	
 	int AirlinePassenger::getAirlinePrice() const {
 		return mAirlinePrice;
 	}
@@ -112,18 +147,27 @@ namespace AirlineReservationSystem {
 
 	void AirlinePassenger::displayPassengerInfo() const {
 		
-		cout << "==========================================================================" << endl;
+		cout << "=====================================================================================================================" << endl;
 		cout << (isReserved() ? "Reserved Passenger " : "Not a Reserved Passenger ") << endl;
 		cout << "___________________________" << endl;
 		cout << "Passenger " << getFirstName() << ", " << getLastName() << endl;
 		cout << "Booking Number " << getBookingNumber() << endl;
 		cout << "Seat Number " << getSeat() << endl;
-		cout << "Airline " << getAirline() << endl;
+		/*cout << "Airline " << airline() << endl;*/
 		cout << "Airline Price " << getAirlinePrice() << endl;
 		cout << "Date of Birth " << getDateOfBirth() << endl;
 		cout << "Gender " << getGender() << endl;
 		cout << "Nationality " << getNationality() << endl;
 		cout << "Passport Number " << getPassportNo() << endl;
+	}
+
+	void AirlinePassenger::displayBookingInfo() const {
+		cout << "=====================================================================================================================" << endl;
+		cout << "Passenger " << getFirstName() << ", " << getLastName() << endl;
+		/*cout << "Airline " << airline() << endl;*/
+		cout << "Booking Number " << getBookingNumber() << endl;
+		cout << "Seat Number " << getSeat() << endl;		
+		cout << "Airline Price " << getAirlinePrice() << endl;
 	}
 
 }

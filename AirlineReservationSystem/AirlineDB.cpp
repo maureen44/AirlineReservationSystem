@@ -12,7 +12,7 @@ namespace AirlineReservationSystem {
 
 	AirlinePassenger& AirlineDB::addPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
-		const std::string& gender, const std::string& nationality) {
+		const std::string& gender, const std::string& nationality, std::vector<std::string> airline) {
 		AirlinePassenger thePassenger(firstName, lastName, dateOfBirth,
 			passportNo, gender, nationality);
 		thePassenger.setBookingNumber(mNextBookingNumber++);
@@ -34,15 +34,14 @@ namespace AirlineReservationSystem {
 	}
 	AirlinePassenger& AirlineDB::getPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
-		const std::string& gender, const std::string& nationality, const char airline) {
+		const std::string& gender, const std::string& nationality) {
 		for (auto& passenger : mPassengers) {
 			if (passenger.getFirstName() == firstName &&
 				passenger.getLastName() == lastName &&
 				passenger.getDateOfBirth() == dateOfBirth && 
 				passenger.getPassportNo() == passportNo &&
 				passenger.getGender() == gender && 
-				passenger.getNationality() == nationality &&
-				passenger.getAirline() == airline) {
+				passenger.getNationality() == nationality ) {
 				return passenger;
 			}
 		}
@@ -51,9 +50,20 @@ namespace AirlineReservationSystem {
 
 	}
 
+	void AirlineDB::airline() const{
+		for (const auto& passenger : mPassengers) {
+			//TODO
+		}
+
+	}
+
 	//TODO
 	void AirlineDB::displayBookingInfo() const {
+		for (const auto& passenger : mPassengers) {
+			if (passenger.isReserved()) {
 				
+			}
+		}
 	}
 
 	void AirlineDB::displayPassengerInfo() const {
@@ -64,10 +74,5 @@ namespace AirlineReservationSystem {
 		}
 	}
 
-	void AirlineDB::displayAll() const {
-		for (const auto& passenger : mPassengers) {
-			passenger.displayPassengerInfo();
-		}
-	}
 
 }
