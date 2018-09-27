@@ -18,10 +18,16 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Airline.h">
+    <ClInclude Include="AirlineFlight.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AirlineDB.h">
+    <ClInclude Include="PassengerDB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlightDB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AirlinePassenger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,10 +38,16 @@
     <ClCompile Include="AirlineReservationSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Airline.cpp">
+    <ClCompile Include="AirlineFlight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AirlineDB.cpp">
+    <ClCompile Include="PassengerDB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlightDB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AirlinePassenger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,0 +1,56 @@
+#include "pch.h"
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+#include "FlightDB.h"
+
+using namespace std;
+
+namespace AirlineReservationSystem {
+
+	AirlineFlight& FlightDB::addAirline(std::string& airline, std::string& departureLocation, std::string& departureDate,
+		std::string& departureTime, std::string& arrivalLocation,
+		std::string& arrivalDate, std::string& arrivalTime) {
+		AirlineFlight theAirline(airline, departureLocation, departureDate, departureTime, arrivalLocation, arrivalDate, arrivalTime);
+		/*theAirline.setAirlineNO(mNextAirlineNumber++);*/
+		theAirline.setSeatNumber(mNextSeatNumber++);
+		theAirline.book();
+		mAirlines.push_back(theAirline);
+		return mAirlines[mAirlines.size() - 1];
+
+	}
+
+	AirlineFlight& FlightDB::getAirline(int seatNo) {
+		for (auto& airline : mAirlines) {
+			if (airline.getSeatNumber() == seatNo) {
+				return airline;
+			}
+		}
+		throw logic_error("No seat found.");
+	}
+
+	AirlineFlight& FlightDB::getAirline(std::string& airCarier, std::string& departureLocation, std::string& departureDate,
+		std::string& departureTime, std::string& arrivalLocation,
+		std::string& arrivalDate, std::string& arrivalTime) {
+		for (auto& airline : mAirlines) {
+			if (airline.getAirline() == airCarier && 
+				airline.getDepartureLocation() == departureLocation &&
+				airline.getArrivalDate() == departureDate &&
+				airline.getDepartureTime() == departureTime && 
+				airline.getArrivalLocation() == arrivalLocation &&
+				airline.getArrivalDate() == arrivalDate &&
+				airline.getArrivalTime() == arrivalTime) {
+				return airline;
+			}
+		}
+		throw logic_error("No Airline/Flight with those details found.");
+	}
+
+	void FlightDB::displayBookingInfo() const {
+		for (const auto& airline : mAirlines) {
+			if (airline.isBooked()) {
+				airline.displayBookingInfo();
+			}
+		}
+	}
+}
