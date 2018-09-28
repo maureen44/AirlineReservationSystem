@@ -10,15 +10,13 @@ namespace AirlineReservationSystem {
 
 	class FlightDB {
 	public:
-		AirlineFlight& addAirline(std::string& airCarier, std::string& departureLocation, std::string& departureDate,
+		AirlineFlight& addAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 			std::string& departureTime, std::string& arrivalLocation,
 			std::string& arrivalDate, std::string& arrivalTime);
 
-		AirlineFlight& getAirline(int seatNo);
+		AirlineFlight& getAirline(int seatNo);	
 
-		//Airline& getAirline();
-
-		AirlineFlight& getAirline(std::string& airCarier, std::string& departureLocation, std::string& departureDate,
+		AirlineFlight& getAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 			std::string& departureTime, std::string& arrivalLocation,
 			std::string& arrivalDate, std::string& arrivalTime);
 

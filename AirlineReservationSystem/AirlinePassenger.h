@@ -4,7 +4,6 @@
 
 namespace AirlineReservationSystem {
 
-
 	class AirlinePassenger {
 
 	public:
@@ -21,7 +20,6 @@ namespace AirlineReservationSystem {
 		bool isReserved() const;
 
 		void reserve();
-		/*void cancel();*/
 
 		//Passenger Info
 

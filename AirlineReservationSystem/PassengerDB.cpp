@@ -24,7 +24,6 @@ namespace AirlineReservationSystem {
 			if (passenger.getBookingNumber() == bookingNo) {
 				return passenger;
 			}
-
 		}		
 		throw logic_error("No Passenger found.");
 	}
