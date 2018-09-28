@@ -13,7 +13,7 @@ namespace AirlineReservationSystem {
 		std::string& departureTime, std::string& arrivalLocation,
 		std::string& arrivalDate, std::string& arrivalTime) : mAirline(airCarrier), mDepartureLocation(departureLocation), mAirlineDepartureDate(departureDate),
 		mDepartureTime(departureTime), mArrivalLocation(arrivalLocation), mAirlineArrivalDate(arrivalDate), mArrivalTime(arrivalTime) {
-
+		
 	}
 	int AirlineFlight::getSeatNumber() const {
 		return mSeatNumber;
@@ -27,7 +27,12 @@ namespace AirlineReservationSystem {
 		return mAirline;
 	}
 	void AirlineFlight::setAirline(std::string& airCarrier) {
-		mAirline = airCarrier;
+		int number = 0;
+		string carrier[] = { "Alaska", "United", "Spirit", "Delta", "American", "JetBlue" };
+		if (airCarrier == carrier[number - 1]) {
+			mAirline = airCarrier;
+		}
+		throw invalid_argument("No Carrier found.");
 	}
 	const std::string& AirlineFlight::getDepartureLocation() const{
 		return mDepartureLocation;

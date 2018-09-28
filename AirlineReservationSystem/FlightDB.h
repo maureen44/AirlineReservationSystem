@@ -22,7 +22,7 @@ namespace AirlineReservationSystem {
 
 		void displayBookingInfo() const;
 	private:
-		std::vector<AirlineFlight> mAirlines;
+		std::vector<AirlineFlight> mAirlines;								
 		int mNextSeatNumber = kFirstSeatNumber;
 		/*int mNextAirlineNumber = kFirstAirlineNumber;*/
 	};
