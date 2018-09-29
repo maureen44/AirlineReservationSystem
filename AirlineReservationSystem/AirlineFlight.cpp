@@ -27,12 +27,7 @@ namespace AirlineReservationSystem {
 		return mAirline;
 	}
 	void AirlineFlight::setAirline(std::string& airCarrier) {
-		int number = 0;
-		string carrier[] = { "Alaska", "United", "Spirit", "Delta", "American", "JetBlue" };
-		if (airCarrier == carrier[number - 1]) {
-			mAirline = airCarrier;
-		}
-		throw invalid_argument("No Carrier found.");
+		
 	}
 	const std::string& AirlineFlight::getDepartureLocation() const{
 		return mDepartureLocation;
