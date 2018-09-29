@@ -10,17 +10,18 @@ namespace AirlineReservationSystem {
 	"  United  Detroit    09/20/2018    10AM    Phoenix    09/20/2018    6PM",
 	"  Spirit  Seattle    09/20/2018     9AM    Chicago    09/20/2018    8PM",
 	"  Delta   Chicago    09/20/2018    11AM    Phoenix    09/20/2018    5PM",
-	"  American Houston   09/20/2018    10AM    Seattle    09/20/2018 8PM",
-	"  JetBlue  Seattle   09/20/2018     9AM    Indianapolis 09/20/2018 10PM" };
+	"  American Houston   09/20/2018    10AM    Seattle    09/20/2018    8PM",
+	"  JetBlue  Seattle   09/20/2018     9AM    Indianapolis 09/20/2018  10PM" };	
+
 	class AirlineFlight {
 	public:
 		AirlineFlight() = default;
 		AirlineFlight(std::string& airCarier, std::string& departureLocation, std::string& departureDate,
 			std::string& departureTime, std::string& arrivalLocation, 
-			std::string& arrivalDate, std::string& arrivalTime);
+			std::string& arrivalDate, std::string& arrivalTime, char seat);
 
-		int getSeatNumber() const;
-		void setSeatNumber(int seatNO);
+		char getSeatNumber() const;
+		void setSeatNumber(char seats);
 
 		int getAirlinePrice() const;
 
@@ -59,7 +60,7 @@ namespace AirlineReservationSystem {
 	private:
 		bool mBooked = false;
 		int mAirlineSeats = 300;
-		int mSeatNumber = 1;
+		char mSeatNumber;
 		int mAirlinePrice = 500;
 		/*int mAirlineNumber = 1;*/
 		std::string mAirline;
