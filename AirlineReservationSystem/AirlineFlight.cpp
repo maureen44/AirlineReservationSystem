@@ -11,16 +11,16 @@ namespace AirlineReservationSystem {
 	//Airline info
 	AirlineFlight::AirlineFlight(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 		std::string& departureTime, std::string& arrivalLocation,
-		std::string& arrivalDate, std::string& arrivalTime) : mAirline(airCarrier), mDepartureLocation(departureLocation), mAirlineDepartureDate(departureDate),
-		mDepartureTime(departureTime), mArrivalLocation(arrivalLocation), mAirlineArrivalDate(arrivalDate), mArrivalTime(arrivalTime) {
+		std::string& arrivalDate, std::string& arrivalTime, char seat) : mAirline(airCarrier), mDepartureLocation(departureLocation), mAirlineDepartureDate(departureDate),
+		mDepartureTime(departureTime), mArrivalLocation(arrivalLocation), mAirlineArrivalDate(arrivalDate), mArrivalTime(arrivalTime), mSeatNumber(seat) {
 		
 	}
-	int AirlineFlight::getSeatNumber() const {
+	char AirlineFlight::getSeatNumber() const {
 		return mSeatNumber;
 	}
-	void AirlineFlight::setSeatNumber(int seatNo) {
+	void AirlineFlight::setSeatNumber(char seats) {
 
-		mSeatNumber = seatNo;
+		mSeatNumber = seats;
 	}
 	
 	const std::string& AirlineFlight::getAirline() const {
