@@ -13,7 +13,7 @@ namespace AirlineReservationSystem {
 		const std::string& gender, const std::string& nationality) {
 		AirlinePassenger thePassenger(firstName, lastName, dateOfBirth,
 			passportNo, gender, nationality);
-		thePassenger.setBookingNumber(mNextBookingNumber++);		
+		thePassenger.setBookingNumber(mNextBookingNumber++);
 		thePassenger.reserve();
 		mPassengers.push_back(thePassenger);
 		return mPassengers[mPassengers.size() - 1];
@@ -24,15 +24,27 @@ namespace AirlineReservationSystem {
 			if (passenger.getBookingNumber() == bookingNo) {
 				return passenger;
 			}
-		}		
+		}
 		throw logic_error("No Passenger found.");
 	}
-	AirlinePassenger& PassengerDB::getPassenger(const std::string& firstName, const std::string& lastName,
+
+	AirlinePassenger& PassengerDB::getPassenger(const std::string& firstName, const std::string& lastName) {
+		for (auto& passenger : mPassengers) {
+			if (passenger.getFirstName() == firstName &&
+				passenger.getLastName() == lastName) {
+				return passenger;
+			}
+
+		}
+	}
+
+
+	AirlinePassenger& PassengerDB::getPassenger(/*const std::string& firstName, const std::string& lastName,*/
 		const std::string& dateOfBirth, const std::string& passportNo,
 		const std::string& gender, const std::string& nationality) {
 		for (auto& passenger : mPassengers) {
-			if (passenger.getFirstName() == firstName &&
-				passenger.getLastName() == lastName &&
+			if (/*passenger.getFirstName() == firstName &&
+				passenger.getLastName() == lastName &&*/
 				passenger.getDateOfBirth() == dateOfBirth &&
 				passenger.getPassportNo() == passportNo &&
 				passenger.getGender() == gender &&

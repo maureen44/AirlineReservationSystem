@@ -18,7 +18,9 @@ namespace AirlineReservationSystem {
 
 		AirlinePassenger& getPassenger(int bookingNo);
 
-		AirlinePassenger& getPassenger(const std::string& firstName, const std::string& lastName,
+		AirlinePassenger& getPassenger(const std::string& firstName, const std::string& lastName);
+
+		AirlinePassenger& getPassenger(/*const std::string& firstName, const std::string& lastName,*/
 			const std::string& dateOfBirth, const std::string& passportNo,
 			const std::string& gender, const std::string& nationality);		
 

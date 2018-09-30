@@ -12,15 +12,16 @@ namespace AirlineReservationSystem {
 	public:
 		AirlineFlight& addAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 			std::string& departureTime, std::string& arrivalLocation,
-			std::string& arrivalDate, std::string& arrivalTime, char seat);
+			std::string& arrivalDate, std::string& arrivalTime, int seat);
 
 		/*AirlineFlight& getAirline(int seatNo);	*/
 
 		AirlineFlight& getAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 			std::string& departureTime, std::string& arrivalLocation,
-			std::string& arrivalDate, std::string& arrivalTime, char seat);
+			std::string& arrivalDate, std::string& arrivalTime, int seat);
 
 		void displayBookingInfo() const;
+		void ticket() const;
 	private:
 		std::vector<AirlineFlight> mAirlines;								
 		/*int mNextSeatNumber = kFirstSeatNumber;*/

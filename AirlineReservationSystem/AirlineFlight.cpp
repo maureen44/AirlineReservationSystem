@@ -11,16 +11,16 @@ namespace AirlineReservationSystem {
 	//Airline info
 	AirlineFlight::AirlineFlight(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 		std::string& departureTime, std::string& arrivalLocation,
-		std::string& arrivalDate, std::string& arrivalTime, char seat) : mAirline(airCarrier), mDepartureLocation(departureLocation), mAirlineDepartureDate(departureDate),
+		std::string& arrivalDate, std::string& arrivalTime, int seat) : mAirline(airCarrier), mDepartureLocation(departureLocation), mAirlineDepartureDate(departureDate),
 		mDepartureTime(departureTime), mArrivalLocation(arrivalLocation), mAirlineArrivalDate(arrivalDate), mArrivalTime(arrivalTime), mSeatNumber(seat) {
 		
 	}
-	char AirlineFlight::getSeatNumber() const {
+	int AirlineFlight::getSeatNumber() const {
 		return mSeatNumber;
 	}
-	void AirlineFlight::setSeatNumber(char seats) {
+	void AirlineFlight::setSeatNumber(int seat) {
 
-		mSeatNumber = seats;
+		mSeatNumber = seat;
 	}
 	
 	const std::string& AirlineFlight::getAirline() const {
@@ -101,6 +101,15 @@ namespace AirlineReservationSystem {
 		cout << "Airline Price " << getAirlinePrice() << endl;
 		cout << "Arrival Time " << getArrivalTime() << endl;
 		cout << "Seat Number " << getSeatNumber() << endl;
+	}
+
+	void AirlineFlight::ticket() const {
+		cout << endl;
+		cout << " |********************************************************|******************************|" << endl;
+		cout << " |FLIGHT " << setw(35) << "DESTINATION " << setw(25) << "|    FLIGHT" << setw(21) << "|" << endl;
+		cout << " |" << getAirline() << setw(31) << getDepartureLocation() << "  To  " << getArrivalLocation() << setw(15) << "| " << getAirline() << setw(11) << "|" << endl;
+		cout << " |DEPARTURE " << setw(37) << "DEPARTURE TERMINAL" << setw(24) << "|    DEPARTURE" << setw(21) << "|" <<endl;
+		cout << getDepartureTime() << "  " << getDepartureDate() << setw(30) << "DEPARTURE TERMINAL" << setw(24) << "|    DEPARTURE" << setw(21) << "|" << endl;
 	}
 
 }
