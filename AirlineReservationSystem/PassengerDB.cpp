@@ -28,23 +28,12 @@ namespace AirlineReservationSystem {
 		throw logic_error("No Passenger found.");
 	}
 
-	AirlinePassenger& PassengerDB::getPassenger(const std::string& firstName, const std::string& lastName) {
-		for (auto& passenger : mPassengers) {
-			if (passenger.getFirstName() == firstName &&
-				passenger.getLastName() == lastName) {
-				return passenger;
-			}
-
-		}
-	}
-
-
-	AirlinePassenger& PassengerDB::getPassenger(/*const std::string& firstName, const std::string& lastName,*/
+	AirlinePassenger& PassengerDB::getPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
 		const std::string& gender, const std::string& nationality) {
 		for (auto& passenger : mPassengers) {
-			if (/*passenger.getFirstName() == firstName &&
-				passenger.getLastName() == lastName &&*/
+			if (passenger.getFirstName() == firstName &&
+				passenger.getLastName() == lastName &&
 				passenger.getDateOfBirth() == dateOfBirth &&
 				passenger.getPassportNo() == passportNo &&
 				passenger.getGender() == gender &&
@@ -61,6 +50,14 @@ namespace AirlineReservationSystem {
 		for (const auto& passenger : mPassengers) {
 			if (passenger.isReserved()) {
 				passenger.displayPassengerInfo();
+			}
+		}
+	}
+
+	void PassengerDB::ticket() const {
+		for (const auto& passenger : mPassengers) {
+			if (passenger.isReserved()) {
+				passenger.ticket();
 			}
 		}
 	}

@@ -84,13 +84,16 @@ namespace AirlineReservationSystem {
 		cout << "Passport Number " << getPassportNo() << endl;
 	}	
 
-	/*void AirlinePassenger::ticket() const {
-		cout << endl;
-		cout << " |***********************************************************************************|******************************|" << endl;
-		cout << " |FLIGHT " << setw(40) << "DESTINATION " << setw(30) << "PASSENGER " << setw(17) << "|    FLIGHT" << setw(21) << "|" << endl;
-		cout << " |" << << setw(40) << get << "To" << arrivalLocation << setw(10) << endl;
-		cout << endl;
-	}*/
+	void AirlinePassenger::ticket() const {
+		cout << " |PASSENGER " << endl;
+		cout << " |" << getFirstName() << "  " << getLastName() << endl;
+		cout << " |" << endl;
+		cout << " |*******************************************************************************************************************" << endl;	
+		cout << " |                                                                                              |||||||||||||||||||||" << endl;
+		cout << " |                                                                                              |||||||||||||||||||||" << endl;
+		cout << " |                                                                                              |||||||||||||||||||||" << endl;
+		cout << " |*******************************************************************************************************************" << endl;
+	}
 
 }
 

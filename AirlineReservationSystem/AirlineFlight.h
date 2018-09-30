@@ -65,6 +65,8 @@ namespace AirlineReservationSystem {
 
 		void displayFlightDetails() const;
 
+		void ticket() const;
+
 	private:
 		bool mBooked = false;
 		int mAirlineSeats = 300;

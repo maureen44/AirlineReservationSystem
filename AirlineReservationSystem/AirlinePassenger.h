@@ -42,7 +42,7 @@ namespace AirlineReservationSystem {
 		void setNationality(const std::string& nationality);
 
 		void displayPassengerInfo() const;
-		/*void ticket() const;*/
+		void ticket() const;
 
 	private:
 
