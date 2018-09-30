@@ -27,9 +27,6 @@ namespace AirlineReservationSystem {
 
 		void setAirlinePrice(int newAirlinePrice);
 
-		/*int getAirlineNo() const;
-		void setAirlineNO(int airlineNo);*/
-
 		const std::string& getAirline() const;
 		void setAirline(std::string& airline);
 
@@ -72,7 +69,6 @@ namespace AirlineReservationSystem {
 		int mAirlineSeats = 300;
 		int mSeatNumber;
 		int mAirlinePrice = 500;
-		/*int mAirlineNumber = 1;*/
 		std::string mAirline;
 		std::string mDepartureLocation;
 		std::string mAirlineDepartureDate;

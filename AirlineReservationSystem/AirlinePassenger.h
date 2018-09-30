@@ -59,10 +59,3 @@ namespace AirlineReservationSystem {
 	};
 }
 	
-//Application will present a menu system of choice to the user
-//Reserve a seat
-//Flight Schedule
-//Display passenger info
-//Flight details
-//User ticket infomation
-//Exit the program

@@ -12,22 +12,12 @@ namespace AirlineReservationSystem {
 		std::string& departureTime, std::string& arrivalLocation,
 		std::string& arrivalDate, std::string& arrivalTime, int seat, std::string& arrivalTerminal, std::string& departureTerminal) {
 		AirlineFlight theAirline(airCarrier, departureLocation, departureDate, departureTime, arrivalLocation, arrivalDate, arrivalTime, seat, arrivalTerminal, departureTerminal);
-		/*theAirline.setAirlineNO(mNextAirlineNumber++);*/
-		/*theAirline.setSeatNumber(mNextSeatNumber++);*/
 		theAirline.book();
 		mAirlines.push_back(theAirline);
 		return mAirlines[mAirlines.size() - 1];
 
 	}
 
-	/*AirlineFlight& FlightDB::getAirline(int seatNo) {
-		for (auto& airline : mAirlines) {
-			if (airline.getSeatNumber() == seatNo) {
-				return airline;
-			}
-		}
-		throw logic_error("No seat found.");
-	}*/
 
 	AirlineFlight& FlightDB::getAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 		std::string& departureTime, std::string& arrivalLocation,

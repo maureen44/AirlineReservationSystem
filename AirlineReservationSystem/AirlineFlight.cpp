@@ -8,7 +8,6 @@ using namespace std;
 
 namespace AirlineReservationSystem {
 
-	//Airline info
 	AirlineFlight::AirlineFlight(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 		std::string& departureTime, std::string& arrivalLocation,
 		std::string& arrivalDate, std::string& arrivalTime, int seat, std::string& departureTerminal, std::string& arrivalTerminal) : mAirline(airCarrier), mDepartureLocation(departureLocation), mAirlineDepartureDate(departureDate),
@@ -105,7 +104,6 @@ namespace AirlineReservationSystem {
 	void AirlineFlight::displayBookingInfo() const {
 		cout << "==================================================================================" << endl;
 		cout << (isBooked() ? "Booked Airline " : "Not Booked Airline ");
-		/*cout << "Airline Number " << getAirlineNo() << endl;*/
 		cout << "AirCarier " << getAirline() << endl;
 		cout << "Departure City " << getDepartureLocation() << endl;
 		cout << "Departure Date " << getDepartureDate() << endl;
@@ -150,4 +148,3 @@ namespace AirlineReservationSystem {
 
 
 }
-//setw(40)

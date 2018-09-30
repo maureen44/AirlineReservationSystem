@@ -9,7 +9,6 @@ using namespace std;
 
 namespace AirlineReservationSystem {
 
-	//Passenger Info	
 	AirlinePassenger::AirlinePassenger(const std::string& firstName, const std::string& lastName,
 	const std::string& dateOfBirth, const std::string& passportNo,
 	const std::string& gender, const std::string& nationality) : mFirstName(firstName), mLastName(lastName),
