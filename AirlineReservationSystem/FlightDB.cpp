@@ -10,7 +10,7 @@ namespace AirlineReservationSystem {
 
 	AirlineFlight& FlightDB::addAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 		std::string& departureTime, std::string& arrivalLocation,
-		std::string& arrivalDate, std::string& arrivalTime, char seat) {
+		std::string& arrivalDate, std::string& arrivalTime, int seat) {
 		AirlineFlight theAirline(airCarrier, departureLocation, departureDate, departureTime, arrivalLocation, arrivalDate, arrivalTime, seat);
 		/*theAirline.setAirlineNO(mNextAirlineNumber++);*/
 		/*theAirline.setSeatNumber(mNextSeatNumber++);*/
@@ -31,7 +31,7 @@ namespace AirlineReservationSystem {
 
 	AirlineFlight& FlightDB::getAirline(std::string& airCarrier, std::string& departureLocation, std::string& departureDate,
 		std::string& departureTime, std::string& arrivalLocation,
-		std::string& arrivalDate, std::string& arrivalTime, char seat) {
+		std::string& arrivalDate, std::string& arrivalTime, int seat) {
 		for (auto& airline : mAirlines) {
 			if (airline.getAirline() == airCarrier && 
 				airline.getDepartureLocation() == departureLocation &&
