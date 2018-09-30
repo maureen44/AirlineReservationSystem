@@ -61,4 +61,12 @@ namespace AirlineReservationSystem {
 			}
 		}
 	}
+
+	void FlightDB::ticket() const {
+		for (const auto& airline : mAirlines) {
+			if (airline.isBooked()) {
+				airline.ticket();
+			}
+		}
+	}
 }

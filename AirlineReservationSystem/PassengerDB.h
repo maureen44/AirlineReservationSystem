@@ -22,7 +22,8 @@ namespace AirlineReservationSystem {
 			const std::string& dateOfBirth, const std::string& passportNo,
 			const std::string& gender, const std::string& nationality);		
 
-		void displayPassengerInfo() const;			
+		void displayPassengerInfo() const;	
+		void ticket() const;
 		
 	private:
 		std::vector<AirlinePassenger> mPassengers;

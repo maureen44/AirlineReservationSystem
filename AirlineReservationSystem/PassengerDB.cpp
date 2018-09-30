@@ -13,7 +13,7 @@ namespace AirlineReservationSystem {
 		const std::string& gender, const std::string& nationality) {
 		AirlinePassenger thePassenger(firstName, lastName, dateOfBirth,
 			passportNo, gender, nationality);
-		thePassenger.setBookingNumber(mNextBookingNumber++);		
+		thePassenger.setBookingNumber(mNextBookingNumber++);
 		thePassenger.reserve();
 		mPassengers.push_back(thePassenger);
 		return mPassengers[mPassengers.size() - 1];
@@ -24,9 +24,10 @@ namespace AirlineReservationSystem {
 			if (passenger.getBookingNumber() == bookingNo) {
 				return passenger;
 			}
-		}		
+		}
 		throw logic_error("No Passenger found.");
 	}
+
 	AirlinePassenger& PassengerDB::getPassenger(const std::string& firstName, const std::string& lastName,
 		const std::string& dateOfBirth, const std::string& passportNo,
 		const std::string& gender, const std::string& nationality) {
@@ -49,6 +50,14 @@ namespace AirlineReservationSystem {
 		for (const auto& passenger : mPassengers) {
 			if (passenger.isReserved()) {
 				passenger.displayPassengerInfo();
+			}
+		}
+	}
+
+	void PassengerDB::ticket() const {
+		for (const auto& passenger : mPassengers) {
+			if (passenger.isReserved()) {
+				passenger.ticket();
 			}
 		}
 	}

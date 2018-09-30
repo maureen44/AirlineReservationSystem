@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <vector>
 #include "AirlinePassenger.h"
+#include "AirlineFlight.h"
 
 using namespace std;
 
@@ -82,6 +83,17 @@ namespace AirlineReservationSystem {
 		cout << "Nationality " << getNationality() << endl;
 		cout << "Passport Number " << getPassportNo() << endl;
 	}	
+
+	void AirlinePassenger::ticket() const {
+		cout << " |PASSENGER " << endl;
+		cout << " |" << getFirstName() << "  " << getLastName() << endl;
+		cout << " |" << endl;
+		cout << " |*******************************************************************************************************************" << endl;	
+		cout << " |                                                                                              |||||||||||||||||||||" << endl;
+		cout << " |                                                                                              |||||||||||||||||||||" << endl;
+		cout << " |                                                                                              |||||||||||||||||||||" << endl;
+		cout << " |*******************************************************************************************************************" << endl;
+	}
 
 }
 

@@ -131,5 +131,23 @@ namespace AirlineReservationSystem {
 		cout << "====================================================================================" << endl; 
 	}
 
+	void AirlineFlight::ticket() const {
+		cout << endl;
+		cout << " |*******************************************************************************************************************" << endl;
+		cout << " |" << endl;
+		cout << " |FLIGHT " << setw(35) << "DESTINATION " << endl;
+		cout << " |" << getAirline() << setw(32) << getDepartureLocation() << "  To  " << getArrivalLocation() << endl;
+		cout << " |" << endl;
+		cout << " |DEPARTURE " << setw(39) << "DEPARTURE TERMINAL " << endl;
+		cout << " |" << getDepartureTime() << "  " << getDepartureDate() << setw(15) << getDepartureTerminal() << endl;
+		cout << " |" << endl;
+		cout << " |SEAT " << endl;
+		cout << " |" << getSeatNumber() << endl;
+		cout << " |" << endl;
+	
+	}
+
+
+
 }
 //setw(40)
