@@ -18,7 +18,7 @@ namespace AirlineReservationSystem {
 		AirlineFlight() = default;
 		AirlineFlight(std::string& airCarier, std::string& departureLocation, std::string& departureDate,
 			std::string& departureTime, std::string& arrivalLocation, 
-			std::string& arrivalDate, std::string& arrivalTime, int seat);
+			std::string& arrivalDate, std::string& arrivalTime, int seat, std::string& departureTerminal, std::string& arrivalTerminal);
 
 		int getSeatNumber() const;
 		void setSeatNumber(int seat);
@@ -51,11 +51,19 @@ namespace AirlineReservationSystem {
 		const std::string& getArrivalTime() const;
 		void setArrivalTime(std::string& arrivalTime);
 
+		const std::string& getArrivalTerminal() const;
+		void setArrivalTerminal(std::string& arrivalTerminal);
+
+		const std::string& getDepartureTerminal() const;
+		void setDepartureTerminal(std::string& departureTerminal);
+
 		bool isBooked() const;
 
 		void book();
 
 		void displayBookingInfo() const;
+
+		void displayFlightDetails() const;
 
 	private:
 		bool mBooked = false;
@@ -70,6 +78,8 @@ namespace AirlineReservationSystem {
 		std::string mArrivalLocation;
 		std::string mAirlineArrivalDate;
 		std::string mArrivalTime;
+		std::string mDepartureTerminal;
+		std::string mArrivalTerminal;
 	};
 
 }
